@@ -1,0 +1,12 @@
+{
+  "name": "templab",
+  "version": "1.0.0",
+  "main": "helpers.js",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
