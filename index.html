@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Temperature Converter</title>
+    <link rel="icon" href="https://fav.farm/🌡️" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.14/mvp.css" />
+    <style>
+      .container {
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><h1>🌡️ Temp Converter</h1></header>
+      <div class="container">
+        <section>
+          <form method="POST">
+            <label>
+              Enter Temperature:
+              <input type="number" step="any" name="temperature" required />
+            </label>
+
+            <label>
+              <input type="radio" name="conversion" value="CtoF" checked />
+              Celsius → Fahrenheit
+            </label>
+
+            <label>
+              <input type="radio" name="conversion" value="FtoC" />
+              Fahrenheit → Celsius
+            </label>
+
+            <button type="submit">Convert</button>
+          </form>
+          <!-- clear conversion form -->
+          <form method="POST" action="/">
+            <input type="hidden" name="action" value="clear" />
+            <button type="submit">Clear Conversions</button>
+          </form>
+
+        </section>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{rows}}
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
